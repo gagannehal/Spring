@@ -1,0 +1,23 @@
+Check arraylist contains element
+ArrayList<String> list = new ArrayList<>( Arrays.asList("banana", "guava", "apple", "cheeku") );
+         
+list.contains("apple");     //true
+list.indexOf("apple");      //2
+
+---------------------
+
+Check array contains element
+String[] fruits = new String[] { "banana", "guava", "apple", "cheeku" };
+ 
+Arrays.asList(fruits).contains("apple"); // true
+Arrays.asList(fruits).indexOf("apple"); // 2
+
+---------------
+Java 8
+
+String[] fruits = new String[] { "banana", "guava", "apple", "cheeku" };
+ 
+boolean result = Arrays.asList(fruits)
+                                    .stream()
+                                    .anyMatch(x -> x.equalsIgnoreCase("apple")); //true
+
